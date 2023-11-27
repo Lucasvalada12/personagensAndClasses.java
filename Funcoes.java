@@ -1,6 +1,7 @@
 
 
 import classes.*;
+import classes.Personagens;
 
 import java.util.Scanner;
 
@@ -8,42 +9,45 @@ public class Funcoes {
     Scanner ler = new Scanner(System.in);
 
     public Personagens escolherClasse() {
+
         Personagens p = null;
-        System.out.println("Your journey begins here, choose your class.");
-        System.out.println("[1] - Cavaleiro");
-        System.out.println("[2] - Mago");
-        System.out.println("[3] - Clerigo");
-        System.out.println("[4] - Arqueira");
-        System.out.println("[5] - Ladino");
-        int classe = ler.nextInt();
-        switch (classe) {
-            case 1:
+        System.out.println("Sua jornada começa agora, escolha 4 personagens para começar!");
+        for (int i = 0; i < 4; i++) {
+            System.out.println("[1] - Cavaleiro");
+            System.out.println("[2] - Mago");
+            System.out.println("[3] - Clerigo");
+            System.out.println("[4] - Arqueira");
+            System.out.println("[5] - Ladino");
+            int classe = ler.nextInt();
+
+            if (classe == 1) {
                 Cavaleiro k = new Cavaleiro();
-                p = k;
-                break;
-            case 2:
+                System.out.println("Você escolheu o Cavaleiro!");
+                continue;
+            } else if (classe == 2) {
                 Mago m = new Mago();
-                p = m;
-                break;
-            case 3:
+                System.out.println("Você escolheu o Mago!");
+                continue;
+            } else if (classe == 3) {
                 Clerigo c = new Clerigo();
-                p = c;
-                break;
-            case 4:
+                System.out.println("Você escolheu o Clerigo!");
+                continue;
+            } else if (classe == 4) {
                 Arqueira a = new Arqueira();
-                p = a;
-                break;
-            case 5:
+                System.out.println("Você escolheu a Arqueira!");
+                continue;
+            } else if (classe == 5) {
                 Ladino l = new Ladino();
-                p = l;
-                break;
-            default:
-                System.out.println("Invalid option.");
-                break;
+                System.out.println("Você escolheu o Ladino!");
+                continue;
+            } else {
+                System.out.println("Opção invalida!");
+            }
+
+
+            return null;
         }
-
-
-        return p;
+        return null;
     }
 }
 

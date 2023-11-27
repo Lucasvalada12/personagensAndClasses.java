@@ -1,6 +1,6 @@
 package classes;
 
-public class Mago extends Personagens{
+public class Mago extends Personagens {
     public  Mago() {
         this.vidaMax = 60;
         this.armadura = 10;

@@ -7,5 +7,6 @@ public class Cavaleiro  extends Personagens {
         ataque = 50;
         velocidade = 25;
 
+
     }
 }

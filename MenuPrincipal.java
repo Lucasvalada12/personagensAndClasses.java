@@ -1,7 +1,10 @@
+import inventario.Inventario;
+
 import java.util.Scanner;
 
 public class MenuPrincipal {
     Scanner ler = new Scanner(System.in);
+    Inventario i = new Inventario();
     public int menu() {
         System.out.println("--------------------------------");
         System.out.println("Main Menu");
@@ -21,6 +24,7 @@ public class MenuPrincipal {
 
                 break;
             case 2:
+                i.inventario();
                 break;
             case 3:
 
