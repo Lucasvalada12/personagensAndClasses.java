@@ -1,8 +1,10 @@
 import inventario.Inventario;
+import locais.taverna.Taverna;
 
 import java.util.Scanner;
 
 public class MenuPrincipal {
+    Taverna t = new Taverna();
     Scanner ler = new Scanner(System.in);
     Inventario i = new Inventario();
     public int menu() {
@@ -21,6 +23,7 @@ public class MenuPrincipal {
 
         switch (menus) {
             case 1:
+                t.MenuTaverna();
                 break;
             case 2:
                 i.inventario();

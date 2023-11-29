@@ -1,5 +1,7 @@
 package locais.taverna;
 
+import classes.Descanso;
+
 import java.util.Scanner;
 
 public class Taverna {
@@ -8,7 +10,9 @@ public class Taverna {
     Scanner ler = new Scanner(System.in);
 
     public int MenuTaverna() {
+        System.out.println("Bem vindos a taverna do alegrinho dourado");
         System.out.println("-----------------------------");
+        System.out.println("escolha uma das opçoes:");
         System.out.println("1 - descansar");
         System.out.println("2 - quadro de missoes");
         System.out.println("3 - comprar poçooes");
@@ -18,7 +22,7 @@ public class Taverna {
 
         switch (escolhaTaverna) {
             case 1:
-                d.Descanso();
+               // d.recuperarVida();
                 break;
             case 2:
 
