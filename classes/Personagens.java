@@ -1,8 +1,8 @@
 package classes;
 
-public class Personagens {
+public abstract class Personagens {
     int vida, armadura, ataque, mana, velocidade, dinheiro, experiencia, vidaMax;
-    String nome;
+    String nome, misssoes;
 
 
 

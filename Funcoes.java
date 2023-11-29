@@ -45,7 +45,7 @@ public class Funcoes {
             }
 
 
-            return null;
+            return p = null;
         }
         return null;
     }
