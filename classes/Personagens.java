@@ -1,6 +1,6 @@
 package classes;
 
-public abstract class Personagens {
+public class Personagens {
          int vida;
     int armadura;
      int ataque;
@@ -13,7 +13,7 @@ public abstract class Personagens {
      String missoes;
 
     // Construtor
-    public Personagens(String nome, int vida, int armadura, int ataque, int mana, int velocidade, int dinheiro, int experiencia, int vidaMax, String missoes) {
+    public Personagens(String nome) {
         this.nome = nome;
         this.vida = vida;
         this.armadura = armadura;

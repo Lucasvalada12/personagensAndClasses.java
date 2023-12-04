@@ -34,6 +34,7 @@ public class Taverna {
                 break;
             case 4:
 
+
                 break;
             default:
                 System.out.println("Escolha inválida!");

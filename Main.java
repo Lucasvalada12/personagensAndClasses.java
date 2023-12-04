@@ -11,7 +11,8 @@ public class Main {
         System.out.println("ola aventureiros,  bem vindos a eldorian!");
         System.out.println();
 
-        f.escolherClasse();
+        f.escolherPersonagens();
+
         m.menu();
 
         //i.inventario();

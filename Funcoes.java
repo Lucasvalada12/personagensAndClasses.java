@@ -1,18 +1,18 @@
 
-
 import classes.*;
-import classes.Personagens;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Funcoes {
     Scanner ler = new Scanner(System.in);
 
-    public Personagens escolherClasse() {
-
-        Personagens p = null;
+    public List<Personagens> escolherPersonagens() {
+        List<Personagens> personagensEscolhidos = new ArrayList<>();
         System.out.println("Sua jornada começa agora, escolha 4 personagens para começar!");
-        for (int i = 0; i < 4; i++) {
+
+        while (personagensEscolhidos.size() < 4) {
             System.out.println("[1] - Cavaleiro");
             System.out.println("[2] - Mago");
             System.out.println("[3] - Clerigo");
@@ -20,34 +20,37 @@ public class Funcoes {
             System.out.println("[5] - Ladino");
             int classe = ler.nextInt();
 
-            if (classe == 1) {
-                Cavaleiro k = new Cavaleiro();
-                System.out.println("Você escolheu o Cavaleiro!");
-                continue;
-            } else if (classe == 2) {
-                Mago m = new Mago();
-                System.out.println("Você escolheu o Mago!");
-                continue;
-            } else if (classe == 3) {
-                Clerigo c = new Clerigo();
-                System.out.println("Você escolheu o Clerigo!");
-                continue;
-            } else if (classe == 4) {
-                Arqueira a = new Arqueira();
-                System.out.println("Você escolheu a Arqueira!");
-                continue;
-            } else if (classe == 5) {
-                Ladino l = new Ladino();
-                System.out.println("Você escolheu o Ladino!");
-                continue;
-            } else {
-                System.out.println("Opção invalida!");
+            Personagens personagem = null;
+
+            switch (classe) {
+                case 1:
+                    personagem = new Cavaleiro();
+                    break;
+                case 2:
+                    personagem = new Mago();
+                    break;
+                case 3:
+                    personagem = new Clerigo();
+                    break;
+                case 4:
+                    personagem = new Arqueira();
+                    break;
+                case 5:
+                    personagem = new Ladino();
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+                    break;
             }
 
-
-            return p = null;
+            if (personagem != null && !personagensEscolhidos.contains(personagem)) {
+                personagensEscolhidos.add(personagem);
+                System.out.println("Você escolheu " + personagem.getClass().getSimpleName() + "!");
+            } else {
+                System.out.println("Opção inválida ou personagem já escolhido!");
+            }
         }
-        return null;
+
+        return personagensEscolhidos;
     }
 }
-
